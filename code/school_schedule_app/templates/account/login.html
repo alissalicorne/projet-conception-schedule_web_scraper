@@ -1,3 +1,5 @@
+<script type="text/javascript" src="../static/facebook_connect.js"></script>
+
 {% extends "shared/_login_layout.html" %}
 
 {% block title %} Login {% endblock %}
@@ -53,6 +55,12 @@
                                 <div class="text-center">
                                     <a class="small" href="/account/register">Créer un compte!</a>
                                 </div>
+                                <div class="text-center"><p class="small">Se connecter via FaceBook&nbsp;
+                                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                                        </fb:login-button>
+                                    </p>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
