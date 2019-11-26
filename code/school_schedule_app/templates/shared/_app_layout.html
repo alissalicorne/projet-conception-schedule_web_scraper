@@ -16,8 +16,31 @@
     <link rel="stylesheet" href="/static/vendor/sb_admin_2/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="/static/css/home.css">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     {% block additional_css %}{% endblock %}
 
+    <script>
+        $(function () {
+            var availableTags = [
+                "cours1",
+                "cours2",
+                "cours3",
+                "cours4",
+                "cours5",
+                "cours6",
+                "cours7",
+                "cours8",
+                "cours9",
+                "cours10"
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
 </head>
 <body id="page-top">
 <!-- Page Wrapper -->
@@ -27,7 +50,10 @@
             Horaire de cours
         </h2>
     </div>
-
+    <div class="ui-widget" align="right">
+            <label for="tags">&nbsp;&nbsp;&nbsp;&nbsp;Ajouter un cours: </label>
+            <input id="tags">
+    </div>
     <!-- Topbar user management -->
     <ul class="navbar-nav ml-auto">
         <!-- Nav Item - User Information -->
